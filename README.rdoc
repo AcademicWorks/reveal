@@ -1,6 +1,6 @@
 = reveal
 
-Description goes here.
+Give it a file, it will return its contents.  If the contents are zipped up, it will return them unzipped.
 
 == Contributing to reveal
  
@@ -14,6 +14,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Aaron Scruggs. See LICENSE.txt for
+Copyright (c) 2011 AcademicWorks, inc. See LICENSE.txt for
 further details.
 

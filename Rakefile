@@ -15,11 +15,11 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "reveal"
-  gem.homepage = "http://github.com/ascruggs/reveal"
+  gem.homepage = "http://github.com/AcademicWorks/reveal"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "aascruggs@gmail.com"
+  gem.summary = %Q{Reads files and doesn't let compression get in the way}
+  gem.description = %Q{It will unzip files if necessary, but you give it a file at it will give you the contents back}
+  gem.email = "ascruggs@academicworks.com"
   gem.authors = ["Aaron Scruggs"]
   # dependencies defined in Gemfile
 end
@@ -32,22 +32,4 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
-
 task :default => :test
-
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "reveal #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
